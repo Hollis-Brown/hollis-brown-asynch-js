@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Handler Program</title>
+</head>
+<body>
+  <button id="button">Click me!</button>
+  <p id="message"></p>
+
+  <script>
+    // Long-running Synchronous: JS event handler with delayed response
+    // Event handler that simulates eating ice cream with a spoon
+
+    // Select the button element and the message element
+    const button = document.querySelector("#button");
+    const message = document.querySelector("#message");
+
+    // Add a click event listener to the button
+    button.addEventListener("click", () => {
+
+      // Update the message to indicate loading
+      message.textContent = "Scooping ice cream...";
+
+      // Simulate a long-running operation with setTimeout
+      setTimeout(() => {
+        // Update the message to indicate the ice cream is ready
+        message.textContent = "Enjoying ice cream!";
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
